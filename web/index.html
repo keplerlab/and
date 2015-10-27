@@ -1,0 +1,146 @@
+<html>
+
+<head>
+    <style>
+        .con {
+            float: left;
+            margin: 10px 20px;
+        }
+        
+        .con button {
+            display: block;
+            height: 30px;
+            width: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>IP : </span>
+        <input id="ip" value="localhost:7003">
+        <button id="connect">Connect</button>
+        <span> - </span>
+        <span class="info"></span>
+    </div>
+    <div class="con" data-board="A">
+        <button>A - Button 0</button>
+        <button>A - Button 1</button>
+        <button>A - Button 2</button>
+        <button>A - Button 3</button>
+        <button>A - Button 4</button>
+        <button>A - Button 5</button>
+        <button>A - Button 6</button>
+        <button>A - Button 7</button>
+        <button>A - Button 8</button>
+        <button>A - Button 9</button>
+        <button>A - Button 10</button>
+        <button>A - Button 11</button>
+        <button>A - Button 12</button>
+        <button>A - Button 13</button>
+        <button>A - Button 14</button>
+        <button>A - Button 15</button>
+        <button>A - Button 16</button>
+        <button>A - Button 17</button>
+        <button>A - Button 18</button>
+        <button>A - Button 19</button>
+        <button>A - Button 20</button>
+        <button>A - Button 21</button>
+        <button>A - Button 22</button>
+        <button>A - Button 23</button>
+        <button>A - Button 24</button>
+        <button>A - Button 25</button>
+    </div>
+    <div class="con" data-board="B">
+        <button>B - Button 0</button>
+        <button>B - Button 1</button>
+        <button>B - Button 2</button>
+        <button>B - Button 3</button>
+        <button>B - Button 4</button>
+        <button>B - Button 5</button>
+        <button>B - Button 6</button>
+        <button>B - Button 7</button>
+        <button>B - Button 8</button>
+        <button>B - Button 9</button>
+        <button>B - Button 10</button>
+        <button>B - Button 11</button>
+        <button>B - Button 12</button>
+        <button>B - Button 13</button>
+        <button>B - Button 14</button>
+        <button>B - Button 15</button>
+        <button>B - Button 16</button>
+        <button>B - Button 17</button>
+        <button>B - Button 18</button>
+        <button>B - Button 19</button>
+        <button>B - Button 20</button>
+        <button>B - Button 21</button>
+        <button>B - Button 22</button>
+        <button>B - Button 23</button>
+        <button>B - Button 24</button>
+        <button>B - Button 25</button>
+    </div>
+    <div class="con" data-board="C">
+        <button>C - Button 0</button>
+        <button>C - Button 1</button>
+        <button>C - Button 2</button>
+        <button>C - Button 3</button>
+        <button>C - Button 4</button>
+        <button>C - Button 5</button>
+        <button>C - Button 6</button>
+        <button>C - Button 7</button>
+        <button>C - Button 8</button>
+        <button>C - Button 9</button>
+        <button>C - Button 10</button>
+        <button>C - Button 11</button>
+        <button>C - Button 12</button>
+        <button>C - Button 13</button>
+        <button>C - Button 14</button>
+        <button>C - Button 15</button>
+        <button>C - Button 16</button>
+        <button>C - Button 17</button>
+        <button>C - Button 18</button>
+        <button>C - Button 19</button>
+        <button>C - Button 20</button>
+        <button>C - Button 21</button>
+        <button>C - Button 22</button>
+        <button>C - Button 23</button>
+        <button>C - Button 24</button>
+        <button>C - Button 25</button>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+        $(function() {
+
+            var ws;
+
+            function connect() {
+                ws = new WebSocket("ws://" + $("#ip").val() || "localhost:7003");
+                ws.onmessage = function(d) {
+                    try {
+                        d = JSON.parse(d.data);
+                    } catch (e) {
+
+                    }
+
+                    if (d) {
+                        $(".info").text(d.msg);
+                    }
+                }
+            }
+
+            function send() {
+                ws.send(JSON.stringify({
+                    "board": $(this).parent().data("board"),
+                    "ldr": $(this).index(),
+                    "state": "low"
+                }));
+            }
+            $("#connect").click(connect);
+            $(".con button").click(send);
+        })
+
+    </script>
+</body>
+
+</html>
