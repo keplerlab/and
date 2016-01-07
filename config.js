@@ -1,3 +1,6 @@
+/*jslint node:true es5:true nomen:true*/
+/* console*/
+
 var config = {};
 
 //config.arduinoASerialPort = "/dev/tty.usbmodem14511";
@@ -27,12 +30,12 @@ config.DEBUG_BOARD = true;
 config.DEBUG_CAM = false;
 config.DEBUG_VIDEO = false;
 config.DEBUG_AUDIO = false;
-config.DEBUG_SIMULATOR = false;
+config.DEBUG_SIMULATOR = true;
 
 config.INIT_BOARD = true;
 config.INIT_CAM = false;
 config.INIT_VIDEO = false;
 config.INIT_AUDIO = false;
-config.INIT_SIMULATOR = false;
+config.INIT_SIMULATOR = true;
 
 module.exports = config;

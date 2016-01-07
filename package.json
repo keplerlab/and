@@ -5,7 +5,6 @@
     "lame": "^1.2.2",
     "machina": "^1.1.2",
     "node-hue-api": "^1.1.2",
-    "opencv": "^3.2.0",
     "osc-min": "^0.2.0",
     "serialport": "^1.7.4",
     "speaker": "^0.2.6",

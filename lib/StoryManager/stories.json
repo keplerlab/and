@@ -1,0 +1,167 @@
+{
+  "shelf": {
+    "timeout": 100000,
+    "states": {
+      "initial": {
+        "clips": [],
+        "functions": [
+          {
+            "trigger": {
+              "type": "ldrhigh",
+              "arg": "ldr0"
+            },
+            "action": "musicA"
+          },
+          {
+            "trigger": {
+              "type": "ldrhigh",
+              "arg": "ldr1"
+            },
+            "action": "musicB"
+          },
+          {
+            "trigger": {
+              "type": "ldrhigh",
+              "arg": "ldr2"
+            },
+            "action": "musicC"
+          },
+          {
+            "trigger": {
+              "type": "ldrhigh",
+              "arg": "ldr3"
+            },
+            "action": "musicD"
+          },
+          {
+            "trigger": {
+              "type": "ldrhigh",
+              "arg": "ldr4"
+            },
+            "action": "musicE"
+          },
+          {
+            "trigger": {
+              "type": "ldrhigh",
+              "arg": "ldr5"
+            },
+            "action": "musicF"
+          }
+        ]
+      },
+      "musicA": {
+        "clips": [
+          {
+            "audio": "SongA"
+          }
+        ],
+        "functions": [
+          {
+            "trigger": {
+              "type": "ldrlow",
+              "arg": "ldr0"
+            },
+            "action": "nomusic"
+          }
+        ]
+      },
+      "musicB": {
+        "clips": [
+          {
+            "audio": "SongB"
+          }
+        ],
+        "functions": [
+          {
+            "trigger": {
+              "type": "ldrlow",
+              "arg": "ldr1"
+            },
+            "action": "nomusic"
+          }
+        ]
+      },
+      "musicC": {
+        "clips": [
+          {
+            "audio": "SongC"
+          }
+        ],
+        "functions": [
+          {
+            "trigger": {
+              "type": "ldrlow",
+              "arg": "ldr2"
+            },
+            "action": "nomusic"
+          }
+        ]
+      },
+      "musicD": {
+        "clips": [
+          {
+            "audio": "SongD"
+          }
+        ],
+        "functions": [
+          {
+            "trigger": {
+              "type": "ldrlow",
+              "arg": "ldr3"
+            },
+            "action": "nomusic"
+          }
+        ]
+      },
+      "musicE": {
+        "clips": [
+          {
+            "audio": "SongE"
+          }
+        ],
+        "functions": [
+          {
+            "trigger": {
+              "type": "ldrlow",
+              "arg": "ldr4"
+            },
+            "action": "nomusic"
+          }
+        ]
+      },
+      "musicF": {
+        "clips": [
+          {
+            "audio": "SongF"
+          }
+        ],
+        "functions": [
+          {
+            "trigger": {
+              "type": "ldrlow",
+              "arg": "ldr5"
+            },
+            "action": "nomusic"
+          }
+        ]
+      },
+      "nomusic": {
+        "clips": [
+          {
+            "audio": "Thanks"
+          }
+        ],
+        "functions": [
+          {
+            "trigger": {
+              "type": "wait",
+              "arg": 0
+            },
+            "action": "initial"
+          }
+        ]
+      }
+    },
+    "functions": []
+  }
+}
