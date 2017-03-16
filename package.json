@@ -2,13 +2,13 @@
   "name": "curiousWall",
   "version": "0.1.0",
   "dependencies": {
-    "lame": "^1.2.2",
-    "machina": "^1.1.2",
+    "lame": "^1.2.4",
+    "machina": "^2.0.0",
     "node-hue-api": "^1.1.2",
-    "osc-min": "^0.2.0",
-    "serialport": "^1.7.4",
+    "osc-min": "1.1.1",
+    "serialport": "4.0.7",
     "speaker": "^0.2.6",
-    "ws": "^0.7.2",
-    "youtube-api": "^1.2.1"
+    "ws": "^2.0.3",
+    "youtube-api": "^2.0.6"
   }
 }
