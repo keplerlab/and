@@ -9,7 +9,7 @@
   - [Platform Packages](#platform-packages)
 - [Testing](#testing)
 - [Source Code Overview](#source-code-overview)
-  - [Controller](#Controller)
+  - [Controller](#controller)
   - [Configuration](#configuration)
   - [Video Manager](#video-manager)
   - [Story Manager](#story-manager)
@@ -19,7 +19,6 @@
   - [Audio Manager](#audio-manager)
 - [Known Issues](#known-issues)
 - [Reaching Out](#reaching-out)
-- [Disclaimer](#disclaimer)
 
 ## Prerequisite 
 
@@ -77,5 +76,5 @@ If above code runs without any error, you have successfully installed 'and' fram
 
 ## Reaching Out
 
-Doing anything interesting with chatbot or want to share your favorite tips and tricks? 
+Doing anything interesting or want to share your favorite tips and tricks? 
 Feel free to reach out with ideas for features or requests.
