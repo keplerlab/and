@@ -9,6 +9,7 @@
     "serialport": "4.0.7",
     "speaker": "0.2.6",
     "ws": "2.0.3",
-    "youtube-api": "2.0.6"
+    "youtube-api": "2.0.6",
+    "speaker": "0.3.0"
   }
 }
