@@ -26,6 +26,13 @@
 - NodeJS 6.9.4
 
 ## Features 
+- Implementation of stories in the form of Finite State Machine.
+- Implements OSC protocol for communicating with different software
+- Flexibility to connect to any audio/video software which supports OSC protocol
+- Integration with wide variety of hardware sensors
+- Ready to use configuration for Resolume Arena
+- Ready to use configuration for Max IP
+- Ready to use configuration for common sensors like button, ldr, piezo.
 
 ## Installation
 
